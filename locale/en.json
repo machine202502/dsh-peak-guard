@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Peak",
+    "description": "Peak-tariff guard: warns a working session when the peak starts and resumes it when it ends"
+  }
+}

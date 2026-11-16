@@ -1,0 +1,7 @@
+- insert:
+    - id: peak-guard
+      name: '@machine202502/dsh-peak-guard'
+      config:
+        bridgePort: 49238
+        pricesUrl: 'http://127.0.0.1:49237/state'
+        language: ru

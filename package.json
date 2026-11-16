@@ -1,0 +1,55 @@
+{
+  "name": "@machine202502/dsh-peak-guard",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Peak-hour guard: warns a working session when the DeepSeek peak tariff starts and resumes it when the peak ends.",
+  "license": "MIT",
+  "author": "machine202502",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/machine202502/dsh-peak-guard.git"
+  },
+  "homepage": "https://github.com/machine202502/dsh-peak-guard#readme",
+  "bugs": {
+    "url": "https://github.com/machine202502/dsh-peak-guard/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "README.ru.md"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "plugin"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
