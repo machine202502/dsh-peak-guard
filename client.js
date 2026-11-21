@@ -13,7 +13,7 @@ window.__ModuleLoader__.load({
     const React = require('react');
     const h = React.createElement;
 
-    const PORT = 49238;
+    const PORT = 38038;
     const base = `http://127.0.0.1:${PORT}`;
     const LANGUAGES = ['ru', 'en', 'zh', 'auto'];
 

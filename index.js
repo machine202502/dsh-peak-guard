@@ -42,8 +42,8 @@ const DEFAULT_SETTINGS = { language: 'ru' };
 const SOURCE = { kind: 'user' };
 
 const DEFAULTS = {
-  bridgePort: 49238,
-  pricesUrl: 'http://127.0.0.1:49237/state',
+  bridgePort: 38038,
+  pricesUrl: 'http://127.0.0.1:38037/state',
   language: 'ru',
   /** Forces a schedule instead of asking the bridge; `debugWindows` wins over both. */
   debugWindows: null,
@@ -284,7 +284,7 @@ export function apply(ctx, config = {}) {
   /** Resolved language of the interface and of the injected texts. */
   const language = () => (settings.language === 'en' ? 'en' : settings.language === 'zh' ? 'zh' : 'ru');
   const strings = () => TEXT[language()];
-  const port = Number(cfg.bridgePort ?? 49238);
+  const port = Number(cfg.bridgePort ?? 38038);
 
   const state = readJson(STATE_FILE);
   const sessions = state !== null && typeof state === 'object' && !Array.isArray(state) ? state : {};

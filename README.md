@@ -25,7 +25,7 @@ The plugin never cancels the agent's work, never touches sub-agents, and never c
 ## Schedule source
 
 The peak schedule is read from the [dsh-pricing](https://github.com/machine202502/dsh-pricing)
-bridge (`http://127.0.0.1:49237/state`), which fetches and validates DeepSeek's official
+bridge (`http://127.0.0.1:38037/state`), which fetches and validates DeepSeek's official
 pricing page. If that plugin is off, the built-in `fallbackPeak` window is used and the log
 says `source=fallback`.
 
@@ -46,8 +46,8 @@ The plugin has a settings card on the Plugins page: it switches the language.
 
 | Key | Default | Meaning |
 |---|---|---|
-| `bridgePort` | `49238` | Loopback port the chip talks to |
-| `pricesUrl` | `http://127.0.0.1:49237/state` | Where the peak schedule comes from |
+| `bridgePort` | `38038` | Loopback port the chip talks to |
+| `pricesUrl` | `http://127.0.0.1:38037/state` | Where the peak schedule comes from |
 | `language` | `ru` | `ru`, `en`, `zh`, or `auto` |
 | `debugWindows` | `null` | `[{ "from": "12:00", "to": "12:02" }]` — forces a window for testing |
 | `debugTz` | `null` | Zone for `debugWindows`, default `fallbackPeak.tz` |
